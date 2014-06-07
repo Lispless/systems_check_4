@@ -19,11 +19,11 @@ class BoundingBox
   end
 
   def right
-    @right = left + width
+    right = left + width
   end
 
   def top
-    @top = bottom + height
+    top = bottom + height
   end
 
   def bottom
@@ -31,7 +31,7 @@ class BoundingBox
   end
 
   def contains_point?(x, y)
-    if x >= left && y >= bottom && x <= right && y <= height
+    if x >= left && y >= bottom && x <= right && y <= top
       true
     else
       false
